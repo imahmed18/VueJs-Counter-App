@@ -1,5 +1,4 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
 import HelloWorld from "../components/HelloWorld.vue";
 </script>
 
@@ -15,22 +14,18 @@ import HelloWorld from "../components/HelloWorld.vue";
 
     <div class="wrapper">
       <HelloWorld msg="Vue Counter App" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/counter">Counter</RouterLink>
-      </nav>
     </div>
   </header>
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -38,28 +33,28 @@ header {
   margin: 0 auto 2rem;
 }
 
-nav {
+.nav-links {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
+.nav-links a.router-link-exact-active {
   color: var(--color-text);
 }
 
-nav a.router-link-exact-active:hover {
+.nav-links a.router-link-exact-active:hover {
   background-color: transparent;
 }
 
-nav a {
+.nav-links a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
 
-nav a:first-of-type {
+.nav-links a:first-of-type {
   border: 0;
 }
 
@@ -78,9 +73,11 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
-  nav {
+  .nav-links {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
